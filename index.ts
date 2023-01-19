@@ -1,5 +1,5 @@
 import {DiscordUser, Channel, ServerChannel, PNG, GIF} from './dc-lib';
-import {Table} from '.easy-tables';
+import {Table} from './easy-tables';
 import path from 'path';
 import * as fs from 'fs';
 import * as readline from 'readline';
