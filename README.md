@@ -1,4 +1,5 @@
 # Required modules
+`ts-node`(to execute this script)<br>
 `path`<br>
 `readline`<br>
 `got`<br>
