@@ -115,20 +115,14 @@ let main =async()=>{
 	log(" ");
 	log("Getting specifics of server");
 	log("-".repeat(50));
-	let komi = me.servers[0]; // 6 - WoW, 0 - Komi
-	let wow = me.servers[6];
-	log("Fetching channels of '"+komi.name+"'...")
-	let channels = await everWait(async ()=>await me.getServerChannels(komi.id),"	Failed. Retrying...",null);
+	let sv = me.servers[0];
+	log("Fetching channels of '"+sv.name+"'...")
+	let channels = await everWait(async ()=>await me.getServerChannels(sv.id),"	Failed. Retrying...",null);
 	let channelTree:Array<ServerChannel> = DiscordUser.sortChannelsByParent(channels);
 	
 	log("	"+channelTree.length+" parent channels found.");
 
-	let target:Channel|ServerChannel = channelTree[1].children[0]; // 1,0 - general, 3,0 - matty
-	// log("### CHANNEL OVERRIDE.")
-	// let target;
-	// for(let chn of me.channels) {
-	// 	if(chn.recipients[0].username=="! Maks") target = chn;
-	// }
+	let target:Channel|ServerChannel = channelTree[1].children[0]; // example target - change to something suitable
 	log("-".repeat(50));
 	//log("Focusing on DM with '"+target.recipients[0].username+"#"+target.recipients[0].discriminator+"' to receive master commands");
 	log(`Focusing on channel '${target.name}' to receive master commands`);
