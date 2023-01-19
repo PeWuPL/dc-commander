@@ -1,0 +1,5 @@
+{
+	"example1": "path/to/local/directory.jpg", 
+	"example2": "node_modules/something/img1.png",
+	"example3": "gifs/someGif.gif"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "dc-easy-stickers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.17"
+  },
+  "dependencies": {
+    "got": "^12.5.3",
+    "tough-cookie": "^4.1.2"
+  }
+}
